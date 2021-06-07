@@ -1,0 +1,2 @@
+[<b>root@localhost]#</b>clear<br>TERM environment variable not set.<br>[<b>root@localhost]#</b>tiem<br>/bin/sh: tiem: command not found<br>[<b>root@localhost]#</b>time<br>user	0m0.00s
+sys	0m0.00s<br>[<b>root@localhost]#</b>whoami<br>apache<br>

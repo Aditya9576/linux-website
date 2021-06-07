@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>HOME</title>
+</head>
+
+<style>
+li
+{
+	position:relative;
+	top:-2px;
+	background:#333;
+	width:50px;
+	height:23px;
+	display:inline;
+	font-size:1.5em;
+	font-family:courier;
+	padding:5px;
+	border:5px solid whitesmoke;
+	box-shadow:0px 0px 5px gray;
+	color:white;
+}
+li:hover {
+  background-color: #4CAF50;
+	font-weight:bolder;
+	box-shadow:inset 0px 0px 5px gray;
+}
+.nav
+{
+	background:#111;
+	padding:5px;
+	width:60%;
+	height:54px;
+	border:2px solid black;
+	margin-left:20%;
+	border:7px solid #4CAF50;
+	box-shadow:0px 0px 5px black;
+}
+
+a
+{
+	text-decoration:none;
+}
+.upper
+{
+	width:100%;
+	height:50px;
+	background:#8B0000;
+	text-align:center;
+	font-weight:bolder;
+	font-family:courier;
+	font-size:1.5em;
+	color:white;
+}
+p
+{
+	position:relative;
+	top:10px;
+}
+/*dark mode*/
+.all
+{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+
+input[type="checkbox"]
+{
+	width:100px;
+	height: 50px;
+	background-color: #FFCC21;
+	-webkit-appearance:none;
+	border-radius: 50px;
+	border:2px solid black;
+	outline: none;
+}
+input:checked[type="checkbox"]
+{
+	background-color: black;
+	border:2px solid #FFCC21;
+}
+
+input[type="checkbox"]:before
+{
+	content: " ";
+	position: absolute;
+	width:35px;
+	height: 35px;
+	background-color: white;
+	border-radius: 35px;
+	top:10px;
+	left:14px;
+	transition-duration: 0.5s;
+}
+
+input:checked[type="checkbox"]:before
+{
+	left:60px;
+	background-color: #FFCC21;
+}
+
+input[type="checkbox"]:after
+{
+	content: " ";
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	background-color: transparent;
+	border-radius: 35px;
+	top:10px;
+	left:2px;
+}
+input:checked[type="checkbox"]:after
+{
+	top:6px;
+	left:52px;
+	background-color: black;
+}
+.p
+{
+	font-size:1.5em;
+}
+.p:hover
+{
+	color:white;
+	background:#4CAF50;
+}
+/*
+#change_ip
+{
+	float:right;
+	margin-right:10px;
+	font-weight:bold;
+	font-family:courier;
+}*/
+</style>
+<body>
+<script>
+function dark()
+   {
+	var a = document.getElementById("click");
+	var b = document.getElementsByTagName('body')[0];
+
+	if(a.checked == true)
+	{
+		b.style.background = "#000000c9";
+		document.getElementsByTagName("body")[0].style.color="whitesmoke";
+	}
+	else
+	{
+		b.style.background = "white";
+		document.getElementsByTagName("body")[0].style.color="black";
+	}
+}
+</script>
+<div class="upper"><p>Project 2 GUI Version</p></div>
+<br>
+<div class="nav">
+<ul id="nav" type="none">
+<a href="http://192.168.43.55"><li style="margin-left:30px;background-color: #4CAF50;">HOME</li></a>
+<a href="http://192.168.43.55/downloads.html"><li style="margin-left:30px;">DOWNLOADS</li></a>
+<a href="http://192.168.43.55/login.html"><li style="margin-left:30px;">Signin</li></a>
+<a href="http://192.168.43.55/help.html"><li style="margin-left:30px;">Help</li></a>
+<a href="http://192.168.43.55/about.html"><li style="margin-left:30px;">About</li></a>
+<li style="margin-left:60px;box-shadow:0px 0px;"><div class="all">
+     <input type="checkbox" id="click" onclick ="dark()" />
+</div>
+</li>
+</ul>
+</div>
+<br>
+<hr style="background:linear-gradient(to right,#7DC57C 0% 16%,#1295C9 16% 32%,#815874 32% 48%,#FADA58 48% 64%,#E15554 64% 80%,#FF8000 80% 100%) ;height:3px;">
+<br>
+<h1>Welcome !</h1>
+<p class="p"><b>1.</b> This GUI interface is created as a Project for the task 2 , given to us by Vimal Sir , under IIEC community (Flask & Python traning). </p>
+<p class="p"><b>2.</b> Through this gui server , anyone can run different Linux Commnads and can also see the output over the server as well.</p> 
+<p class="p"><b>3.</b> This webserver is divided into different section , like home,downloads, signin and about sections for easy usability.</p>
+<p class="p"><b>4.</b> To RUN Commands you have first goto the signin section and then signin with the username and password. You will get username and password on the signin section.</p>
+<p class="p"><b>5.</b> In the HELP section,you will get all the necessary instructions, in-order to run this server successfully.</p>
+<p class="p"><b>6.</b> Download section have the link of all the web-pages used in this server ,for if anyone required to download some particular file again.</p>
+<br>
+<br>
+<hr style="background:linear-gradient(to right,#7DC57C 0% 16%,#1295C9 16% 32%,#815874 32% 48%,#FADA58 48% 64%,#E15554 64% 80%,#FF8000 80% 100%) ;height:3px;">
+<!--
+<button id="change_ip">
+IP	
+</button>-->
+</body>
+<script type="module" src="./ipmodule.js"></script>
+</html>
